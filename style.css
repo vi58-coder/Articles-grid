@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100%;
+}
+
+.grid-wrap{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px auto;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-content a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.post-content a:hover {
+    background-color: #0056b3;
+}
+
+/* For Tablets (768px and above) */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .large-post {
+        grid-column: span 2;
+    }
+}
+
+/* For Desktop/Laptop (1024px and above) */
+@media (min-width: 1024px) {
+  
+    .grid-container {
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(4, 150px);
+    }
+
+    .item-three{
+        grid-column: span 2;
+        grid-row: span 3;
+        
+    }
+
+    .large-post {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+}
