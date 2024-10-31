@@ -9,6 +9,7 @@ body {
     background-color: #f4f4f4;
     padding: 20px;
     height: 100%;
+    
 }
 
 .grid-wrap{
@@ -23,7 +24,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     gap: 20px;
 }
 
@@ -45,21 +46,58 @@ body {
     display: block;
 }
 
-.post-content {
-    padding: 15px;
+/* .post-content {
+    padding: 2px 3px 5px 3px;
+    text-align: start;
+   
+} */
+
+.posting{
+    padding: 2px 3px 5px 3px;
+}
+
+.post-content-1{
     text-align: center;
+    padding-top: 7.5rem;
+    max-width: 90%;
+    margin: auto;
+    color: white;
+}
+
+.large-post{
+    background-image: url(images/scrape\ \(1\).jpeg);
+    background-position: center;
+    background-size: cover;
+    /* filter: brightness(0.5); */
+    
+}
+
+.post__para{
+    line-height: 22px;
+    color: whitesmoke;
+}
+
+.post-heading{
+    padding-bottom: 1rem;
 }
 
 .post-content p {
     font-size: 1rem;
-    color: #777;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.post-content h2 {
+    font-size: 1.2rem;
+    color: white;
     margin-bottom: 10px;
 }
 
-.post-content h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
+.poster-1{
+    background-image: url(images/2nd.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: white;
 }
 
 .post-content a {
@@ -68,6 +106,7 @@ body {
     background-color: #007bff;
     padding: 10px 20px;
     border-radius: 5px;
+    width: 90%;
     display: inline-block;
 }
 
@@ -78,11 +117,18 @@ body {
 /* For Tablets (768px and above) */
 @media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(4, 150px);
+    }
+    .item-three{
+        grid-column: span 2;
+        grid-row: span 3;
+        
     }
 
     .large-post {
         grid-column: span 2;
+        grid-row: span 3;
     }
 }
 
