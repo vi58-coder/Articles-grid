@@ -58,7 +58,7 @@ body {
 
 .post-content-1{
     text-align: center;
-    padding-top: 7.5rem;
+    padding: 4rem 0;
     max-width: 90%;
     margin: auto;
     color: white;
@@ -116,6 +116,14 @@ body {
 
 /* For Tablets (768px and above) */
 @media (min-width: 768px) {
+
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .grid-container {
         grid-template-columns: repeat(4, 200px);
         grid-template-rows: repeat(4, 150px);
@@ -124,6 +132,11 @@ body {
         grid-column: span 2;
         grid-row: span 3;
         
+    }
+
+
+    .post-content-1{
+        padding-top: 7.5rem;
     }
 
     .large-post {
@@ -144,6 +157,10 @@ body {
         grid-column: span 2;
         grid-row: span 3;
         
+    }
+
+    .post-content-1{
+        padding-top: 7.5rem;
     }
 
     .large-post {
